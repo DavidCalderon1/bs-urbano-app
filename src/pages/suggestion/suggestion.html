@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sugerencias</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let suggestion of suggestions">
+      <h2>{{ suggestion.date }}</h2>
+      <p>{{ suggestion.detail }}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

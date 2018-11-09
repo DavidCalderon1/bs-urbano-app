@@ -12,29 +12,42 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpClientModule } from '@angular/common/http';
 import { SuggestionServiceProvider } from '../providers/suggestion-service/suggestion-service';
 
+import { SignInPage } from '../pages/sign-in/sign-in';
+
+// Logging Services
+import { LoggerService } from '../services/log4ts/logger.service';
+import { ConsoleLoggerService } from '../services/log4ts/console-logger.service';
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    SuggestionPage
+    SuggestionPage,
+    SignInPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp, {}, {
+      links: [
+        { component: SignInPage, name: 'SignInPage', segment: 'sign-in' }
+      ]
+    }),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
     ListPage,
-    SuggestionPage
+    SuggestionPage,
+    SignInPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
+    {provide: LoggerService, useClass: ConsoleLoggerService},
     SuggestionServiceProvider
   ]
 })

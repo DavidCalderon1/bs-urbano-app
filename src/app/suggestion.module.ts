@@ -13,7 +13,6 @@ import { SuggestionPage } from '../pages/suggestion/suggestion';
   imports: [
     BrowserModule,
     IonicPageModule.forChild(SuggestionPage),
-    Http
   ],
   exports: [
     SuggestionPage

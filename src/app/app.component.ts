@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { SignInPage } from '../pages/sign-in/sign-in';
+import { LoginPage } from '../pages/login/login';
 import { ListPage } from '../pages/list/list';
 import { SuggestionPage } from '../pages/suggestion/suggestion';
 
@@ -31,6 +32,7 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Sign-In', component: SignInPage },
+      { title: 'Login', component: LoginPage },
       { title: 'List', component: ListPage },
       { title: 'Suggestion', component: SuggestionPage },
     ];

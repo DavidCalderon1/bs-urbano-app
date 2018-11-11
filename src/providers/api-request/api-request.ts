@@ -15,8 +15,9 @@ export class ApiRequestProvider {
 	
 	httpOptions = {
 		headers: new HttpHeaders({
-			'Content-Type':  'application/json',
-			'Authorization': this.getToken()
+      'Content-Type':  'application/json',
+      'Access-Control-Allow-Origin': '*'
+			//'Authorization': this.getToken()
 		})
 	}
 
@@ -34,7 +35,8 @@ export class ApiRequestProvider {
     return this.http.get(this.url + '/' + endpoint, this.httpOptions)
   }
 
-  post(endpoint: string, body: any, reqOpts?: any) {
+  post(endpoint: string, body: any) {
+    console.log(this.httpOptions)
     return this.http.post(this.url + '/' + endpoint, body, this.httpOptions )
   }
 

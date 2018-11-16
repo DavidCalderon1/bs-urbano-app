@@ -8,6 +8,8 @@ import { SignInPage } from '../pages/sign-in/sign-in';
 import { LoginPage } from '../pages/login/login';
 import { ListPage } from '../pages/list/list';
 import { SuggestionPage } from '../pages/suggestion/suggestion';
+import { SubjectsPage } from '../pages/subjects/subjects';
+import { SubjectShowPage } from '../pages/subject-show/subject-show';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,6 +24,7 @@ import { ConsoleLoggerService } from '../services/log4ts/console-logger.service'
 
 import { AuthProvider } from '../providers/auth/auth';
 import { ApiRequestProvider } from '../providers/api-request/api-request';
+import { RestApiProvider } from '../providers/rest-api/rest-api';
 
 
 @NgModule({
@@ -32,13 +35,15 @@ import { ApiRequestProvider } from '../providers/api-request/api-request';
     SignInPage,
     ListPage,
     SuggestionPage,
+    SubjectsPage,
+    SubjectShowPage,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(MyApp, {}, {
       links: [
-        { component: SignInPage, name: 'SignInPage', segment: 'sign-in' }
+        { component: SignInPage, name: 'SignInPage', segment: 'sign-in' },
       ]
     }),
   ],
@@ -50,6 +55,8 @@ import { ApiRequestProvider } from '../providers/api-request/api-request';
     LoginPage,
     ListPage,
     SuggestionPage,
+    SubjectsPage,
+    SubjectShowPage,
   ],
   providers: [
     StatusBar,
@@ -58,7 +65,8 @@ import { ApiRequestProvider } from '../providers/api-request/api-request';
     {provide: LoggerService, useClass: ConsoleLoggerService},
     SuggestionServiceProvider,
     AuthProvider,
-    ApiRequestProvider
+    ApiRequestProvider,
+    RestApiProvider
   ]
 })
 export class AppModule {}

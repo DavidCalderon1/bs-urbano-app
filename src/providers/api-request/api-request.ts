@@ -27,7 +27,7 @@ export class ApiRequestProvider {
 
   getToken(){
     let token = localStorage.getItem('token')
-    console.log(token)
+    console.log('token:'+token)
 		return token ? token : " " 
 	}
 

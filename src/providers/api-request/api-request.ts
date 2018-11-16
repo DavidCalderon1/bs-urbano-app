@@ -16,8 +16,8 @@ export class ApiRequestProvider {
 	httpOptions = {
 		headers: new HttpHeaders({
       'Content-Type':  'application/json',
-      'Access-Control-Allow-Origin': '*'
-			//'Authorization': this.getToken()
+      'Access-Control-Allow-Origin': '*',
+			'Authorization': this.getToken()
 		})
 	}
 

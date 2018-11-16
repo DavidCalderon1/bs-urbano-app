@@ -12,7 +12,7 @@ export class AuthProvider {
 			console.log('Hello AuthProvider Provider');
   }
 
-  login(credentials){
+    login(credentials){
     return this.api.post('sessions', JSON.stringify({user: credentials}))
 			.map(data => this.saveData(data))
 	}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SuggestionPage } from '../suggestion/suggestion';
 
 /**
  * Generated class for the SuggestionNewPage page.

@@ -7,17 +7,26 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>sign-in</ion-title>
+    <ion-title>Registrarse</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <br>
+  <img src="../../assets/imgs/logoR.png">
+  <br><br>
   <form [formGroup]="credentialsForm">
 
     <ion-item>
-      <ion-label floating>Email</ion-label>
+        <ion-label floating>Nombre</ion-label>
+        <ion-input type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>E-mail</ion-label>
       <ion-input [formControl]="credentialsForm.controls['email']"
           type="email"></ion-input>
     </ion-item>
@@ -25,25 +34,25 @@
     <div *ngIf="!credentialsForm.controls.email.valid &&
         credentialsForm.controls.email.dirty"
         class="validator-error">
-      Please enter a valid email.
+        Por favor introduzca una dirección de correo electrónico válida.
     </div>
 
     <ion-item>
-      <ion-label floating>Password</ion-label>
+      <ion-label floating>Contraseña</ion-label>
       <ion-input [formControl]="credentialsForm.controls['password']"
           type="password"></ion-input>
     </ion-item>      
-  
+  <br>
     <div *ngIf="credentialsForm.controls.password.hasError('pattern') &&
         (credentialsForm.controls.password.dirty || submitted)"
         class="validator-error">
-      Passwords should be at least 8 characters long and contain one number, one character and one special character.
+        La contraseña deben tener al menos 8 caracteres y deben contener un número, un carácter y un carácter especial.
     </div>
-
+<br>
     <ion-row>
       <ion-col text-center>
         <button ion-button block color="secondary" [disabled]="!credentialsForm.valid" (click)="onSignIn()">
-          Sign in
+          Registrarse
         </button>
       </ion-col>
     </ion-row>
@@ -51,7 +60,7 @@
     <ion-row>
       <ion-col text-center>
         <button ion-button clear color="" (click)="onForgotPassword()">
-          Forgot your password?
+            ¿Olvidaste tu contraseña?
         </button>
       </ion-col>
     </ion-row>

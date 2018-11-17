@@ -43,7 +43,7 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     HttpClientModule,
     IonicModule.forRoot(MyApp, {}, {
       links: [
-        { component: SignInPage, name: 'SignInPage', segment: 'sign-in' },
+        { component: SignInPage, name: 'LoginPage', segment: 'login-page' },
       ]
     }),
   ],

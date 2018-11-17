@@ -86,3 +86,8 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
+$app-background: linear-gradient(135deg, rgba(9,149,168,1) 0%, rgba(9,149,168,1) 23%, rgba(19,40,63,1) 93%, rgba(19,40,63,1) 100%);
+$background-color: transparent;
+$toolbar-background: transparent;

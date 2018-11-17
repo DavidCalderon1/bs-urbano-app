@@ -1,3 +1,3 @@
 export const ENV = {
-  API: 'http://localhost:3000/api/v1'
+  API: 'https://bs-urbano.herokuapp.com/api/v1'
 };

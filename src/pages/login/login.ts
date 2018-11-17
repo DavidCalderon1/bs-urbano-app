@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AuthProvider } from '../../providers/auth/auth';
-import { HomePage } from '../home/home';
+import { ListPage } from '../list/list';
 
 @IonicPage()
 @Component({
@@ -45,6 +45,6 @@ export class LoginPage {
 	}
 
 	redirectToHome() {
-		this.navCtrl.push(HomePage);
+		this.navCtrl.push(ListPage);
 	}
 }

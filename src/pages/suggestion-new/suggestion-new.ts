@@ -44,6 +44,9 @@ export class SuggestionNewPage {
         }
       )
   }
+  newSuggestion(arg0: { detail: string; user_id: string; date: string; }): any {
+    throw new Error("Method not implemented.");
+  }
 
   redirectToList() {
     this.navCtrl.push(SuggestionPage);

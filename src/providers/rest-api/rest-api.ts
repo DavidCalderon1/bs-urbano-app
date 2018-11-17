@@ -62,7 +62,7 @@ export class RestApiProvider {
 	    catchError(this.handleError));
 	}
 
-	public getSubjectsById(id: string): Observable<any> {
+	public getSubjectsById(id: number): Observable<any> {
 	  const url = `${apiUrlSubject}/${id}`;
 	  return this.http.get(url, this.httpOptions).pipe(
 	    map(this.extractData),
@@ -77,7 +77,7 @@ export class RestApiProvider {
 	    );
 	}
 
-	public updateSubjects(id: string, data): Observable<any> {
+	public updateSubjects(id: number, data): Observable<any> {
 	  const url = `${apiUrlSubject}/${id}`;
 	  return this.http.put(url, data, this.httpOptions)
 	    .pipe(
@@ -85,7 +85,7 @@ export class RestApiProvider {
 	    );
 	}
 
-	public deleteSubjects(id: string): Observable<{}> {
+	public deleteSubjects(id: number): Observable<{}> {
 	  const url = `${apiUrlSubject}/${id}`;
 	  return this.http.delete(url, httpOptions)
 	    .pipe(

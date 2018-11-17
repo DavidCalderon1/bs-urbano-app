@@ -16,8 +16,8 @@ export class ApiRequestProvider {
 	httpOptions = {
 		headers: new HttpHeaders({
       'Content-Type':  'application/json',
-      'Access-Control-Allow-Origin': '*'
-			//'Authorization': this.getToken()
+      'Access-Control-Allow-Origin': '*',
+			'Authorization': this.getToken()
 		})
 	}
 
@@ -27,7 +27,7 @@ export class ApiRequestProvider {
 
   getToken(){
     let token = localStorage.getItem('token')
-    console.log(token)
+    console.log('token:'+token)
 		return token ? token : " " 
 	}
 

@@ -20,6 +20,7 @@ export class AuthProvider {
 	saveData(data) {
 		console.log(data.auth_token)
 		localStorage.setItem('token', data.auth_token);
+		localStorage.setItem('id_user', data.id_user);
 	}
 
 	logout() {

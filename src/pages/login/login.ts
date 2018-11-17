@@ -10,23 +10,23 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
 
-  private username: string;
-  private password: string;
+  	private username: string;
+  	private password: string;
   
 	loading = false;
 	submitted = false;
 	returnUrl: string;
 	error = '';
 
-  constructor(
-    public auth: AuthProvider,
-		public navCtrl: NavController,
-		public navParams: NavParams) {
-  }
+	constructor(
+	    public auth: AuthProvider,
+			public navCtrl: NavController,
+			public navParams: NavParams) {
+	}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
-  }
+	ionViewDidLoad() {
+		console.log('ionViewDidLoad LoginPage');
+	}
 
 	submitlogin(){
 		this.submitted = true;
@@ -44,7 +44,7 @@ export class LoginPage {
 			)
 	}
 
-  redirectToHome() {
+	redirectToHome() {
 		this.navCtrl.push(HomePage);
-  }
+	}
 }

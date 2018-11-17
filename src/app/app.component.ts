@@ -8,6 +8,7 @@ import { SignInPage } from '../pages/sign-in/sign-in';
 import { LoginPage } from '../pages/login/login';
 import { ListPage } from '../pages/list/list';
 import { SuggestionPage } from '../pages/suggestion/suggestion';
+import { SubjectsPage } from '../pages/subjects/subjects';
 
 import { LoggerService } from '../services/log4ts/logger.service';
 
@@ -34,6 +35,7 @@ export class MyApp {
       { title: 'Sign-In', component: SignInPage },
       { title: 'Login', component: LoginPage },
       { title: 'List', component: ListPage },
+      { title: 'Subjects', component: SubjectsPage },
       { title: 'Suggestion', component: SuggestionPage },
     ];
 

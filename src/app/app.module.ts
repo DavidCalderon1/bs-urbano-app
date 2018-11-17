@@ -11,6 +11,7 @@ import { SuggestionPage } from '../pages/suggestion/suggestion';
 import { SubjectsPage } from '../pages/subjects/subjects';
 import { SubjectShowPage } from '../pages/subject-show/subject-show';
 import { HomePrincipalPage } from '../pages/home-principal/home-principal';
+import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -39,6 +40,8 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     SubjectsPage,
     SubjectShowPage,
     HomePrincipalPage,
+    TabsPage,
+
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import { RestApiProvider } from '../providers/rest-api/rest-api';
     SubjectsPage,
     SubjectShowPage,
     HomePrincipalPage,
+    TabsPage,
   ],
   providers: [
     StatusBar,

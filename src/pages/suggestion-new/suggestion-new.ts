@@ -17,6 +17,8 @@ export class SuggestionNewPage {
 
   private detail: string;
   private dateTime: string;
+  error: string;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

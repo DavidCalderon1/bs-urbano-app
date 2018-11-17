@@ -22,4 +22,8 @@ export class SuggestionServiceProvider {
   getSuggestions() {
     return this.api.get('suggestions');
   }
+
+  newSuggestion() {
+    // return this.api.get('suggestions');
+  }
 }
